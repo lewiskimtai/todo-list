@@ -5,7 +5,7 @@ def create_task(task):
     todo_list.append(task)
     print("Task successfully created")
     print(todo_list)
-    return
+
 
 def delete_task(task):
     task = input("Enter the task you want to delete:   ")
@@ -28,3 +28,6 @@ def mark_as_finished(task):
 def delete_all_tasks():
     todo_list.clear()
     print("All Tasks Successfully Deleted")
+
+def view_all_tasks():
+    print(todo_list)

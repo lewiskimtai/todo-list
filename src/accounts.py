@@ -2,22 +2,26 @@ accounts = {}
 
 def add_account(name, password):
 
-    name = input("Enter New User Name:  ")
-    password = input("Enter New User Password:  ")
-    accounts = {name: password}
+   
+    #accounts = {name: password}
+    accounts[password] = name
     print("Account successfully added")
+    
     return accounts
 
 
 def login(name, password):
-    name = name
-    password = password
     
-    for name, password in accounts:
-        if name == name and password == password:
+    
+    for key,value in accounts.items():
+        if name == value and password == key:
             print("Logged_In Successfully")
+            return True
+            
         else:
-            print("Log_In Unsuccessful") 
+            print("Log_In Unsuccessful")
+    return False
+
 
 
 
